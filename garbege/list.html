@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .drop_down_container {
+            width: 100%;
+            transition: all .3s ease-in;
+            overflow: hidden;
+        }
+
+        .seletion_container {
+            background-color: #4e4d61;
+            width: 100%;
+            display: flex;
+            /* position: relative; */
+            justify-content: space-around;
+            height: 3rem;
+            margin-bottom: 1rem;
+            border-radius: .5rem;
+            align-items: center;
+        }
+
+        li {
+            background-color: white;
+            list-style: none;
+            padding: .5rem 1rem .5rem 1.2rem;
+            border-radius: 1rem;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background-color: #4e4d61;
+            color: white;
+        }
+
+        #drop_icon {
+            font-size: 2rem;
+            color: white;
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 100%;
+            display: grid;
+            cursor: pointer;
+            place-items: center;
+            transition: all .3s ease-in;
+            transform: rotate(90deg);
+        }
+
+        #drop_icon:hover {
+            background-color: #5f5e6c;
+        }
+
+        span {
+            font-size: 1.5rem;
+            color: aliceblue;
+        }
+
+        .options_container {
+            box-shadow: 0 2px 20px -10px black;
+            background-color: #b3d872;
+            padding: 1rem;
+            position: absolute;
+            top: 0;
+            width: 10rem;
+            transform: translateY(-100%);
+            border-radius: .5rem;
+            transition: all .2s ease-in;
+        }
+        .list_container{
+            height: 100vh;
+        }
+
+        .active {
+            transition: all .3s ease-in;
+            transform: translateY(0%);
+            margin-top: 3.5rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list_container">
+        <div class="drop_down_container">
+            <div class="seletion_container">
+                <span id="selected_name">Select</span>
+                <div id="drop_icon">></div>
+                <div class="options_container">
+                    <div class="list_parent">
+                        <li>html</li>
+                        <li>js</li>
+                        <li>java</li>
+                        <li>css</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lists">
+
+        </div>
+    </div>
+    <script>
+        const list_parent = document.querySelector(".list_parent");
+        const selected_name = document.querySelector("#selected_name")
+        const options_container = document.querySelector(".options_container")
+        const drop_icon = document.querySelector("#drop_icon")
+        const lists = document.querySelector(".lists");
+        let data = [
+            {
+                projectName: "html",
+                installation:"dkfjkdjfj"
+            },
+            {
+                projectName: "css",
+                installation:"dk"
+            },
+            {
+                projectName: "js",
+                installation:"dkf"
+            }
+            , {
+                projectName: "java",
+                installation:"dk'"
+            }
+        ]
+        let list = ""
+        const changeData = (flag = "html") => {
+            selected_name.innerHTML = flag;
+            data.forEach(e => {
+                if (e.projectName == flag) {
+                    let html = `
+            <div>
+                <a href=""  target="show">
+                    <li>${e.projectName}</li>
+                </a>
+                <a href="">
+                    <li>${e.installation}</li>
+                </a>
+                <a href="">
+                    <li>${e.projectName}</li>
+                </a>
+                <a href="">
+                    <li>${e.projectName}</li>
+                </a>
+            </div>
+        `
+                    list = html
+                    lists.innerHTML = list;
+                }
+            })
+        }
+       changeData()
+        Array.from(list_parent.children).forEach((e) => {
+            e.addEventListener("click", () => {
+                drop_icon.style.transform = "rotate(90deg)"
+                options_container.classList.remove("active")
+                changeData(e.innerHTML)
+            })
+        })
+        let count = 0;
+        drop_icon.addEventListener("click", () => {
+            switch (count) {
+                case 0:
+                    drop_icon.style.transform = "rotate(-90deg)"
+                    options_container.classList.add("active")
+                    count = 1
+                    break;
+                default:
+                    drop_icon.style.transform = "rotate(90deg)"
+                    options_container.classList.remove("active")
+                    count = 0
+            }
+        })
+    </script>
+</body>
+
+</html>

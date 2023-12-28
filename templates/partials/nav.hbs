@@ -1,0 +1,41 @@
+<header class="nav_container">
+        <div class="main_logo">
+            <img src="img\IMG_20230509_055819.jpg" alt="">
+        </div>
+        <nav>
+            <a href="">
+                <li>Home</li>
+            </a>
+            <a href="/#projects">
+                <li>Projects</li>
+            </a>
+            <a href="/#about">
+                <li>About</li>
+            </a>
+            <a href="/#services">
+                <li>Services</li>
+            </a>
+            <a href="/#contact">
+                <li>Contanct Us</li>
+            </a>
+        </nav>
+        <div class="menu" style="width:4rem">
+            <img style="width:100%;"src="/img/menu.svg" alt="">
+        </div>
+    </header>
+    <script>
+        const menu = document.querySelector(".menu")
+        const nav_container = document.querySelector(".nav_container")
+        let active=true;
+        menu.addEventListener("click",()=>{
+           active? nav_container.classList.add("resnav"):nav_container.classList.remove("resnav")
+           if(active){
+             nav_container.classList.add("resnav")
+             active=false
+           }
+           else{
+            nav_container.classList.remove("resnav")
+            active=true
+           }
+        })
+    </script>

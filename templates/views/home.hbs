@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{>head}}
+<body class="body">
+    {{>nav}}
+     <!-- hero section is start -->
+    <section id="about">
+         <div class="banner_container">
+            <div class="banner_imgs">
+                <div class="banner">
+                    <img src="/img/banner_img.jpg" alt="">
+                </div>
+                <div class="main_img">
+                    <img src="/img/IMG_20230509_055819.jpg" alt="">
+                </div>
+            </div>
+            <div class="banner_intro">
+                <h1>Sandeep kumar</h1>
+                <p><span>Full Stack Web Developer||With Node Js||Express Js||Scss||Mongodb DataBase and Mongoose ect</span>I am also learn in Mechanical Engineering as well as other programming language like java,c++</p>
+            </div>
+        </div>
+    </section>
+    <!-- hero section is end -->
+
+    <!-- projects section is start -->
+    <section id="projects">
+
+        <div class="project_container">
+            <h3 class="section_tag">Projects</h3>
+            <div class="projects">
+               <h1>Loading..........</h1>
+            </div>
+        </div>
+    </section>
+    <!-- projects section is end -->
+
+    <!-- advantages section is start -->
+    <section id="">
+        <div class="advantages_container">
+            <h3 class="section_tag">Advantages</h3>
+            <div class="advantages">
+                <h1>Loading..........</h1>
+            </div>
+        </div>
+    </section>
+    <!-- advantages section is end -->
+
+    <section id="services">
+        <div class="services_container">
+            <h3 class="section_tag">Our Services</h3>
+            <div class="services">
+                <h1>Loading..........</h1>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        {{!-- https://formspree.io/f/xpzenlar --}}
+        <div class="form_container">
+            <form action="/message" method="post">
+                <div class="form">
+                    {{!-- <div class="contact_options"></div> --}}
+                    <div class="touch_container">
+                        <div class="touch">
+                            <div class="main_input">
+                                <div>
+                                    <label for="name">Full Name</label>
+                                    <input type="text" name="name" required autocomplete="off" id="name">
+                                </div>
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" required autocomplete="off" id="email">
+                                </div>
+                            </div>
+                            <div class="send_input">
+                                <div>
+                                    <label for="subject">Choose subject</label>
+                                    <input type="text" id="subject" required autocomplete="off" name="subject">
+                                </div>
+                                {{!-- <div>
+                                    <label for="subject">Confirm subject</label>
+                                    <input type="subject" id="confirmsubject">
+                                </div> --}}
+                                <div>
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="" cols="30" required rows="10" id="message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="send_btn_wrapper">
+                            <button class="ger_btn" type="submit">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    {{>footer}}
+    <script src="/js/index.js"></script>
+</body>
+</html>

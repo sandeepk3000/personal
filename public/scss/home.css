@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.nav_container {
+  background-color: red;
+  height: 5rem;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.main_logo img {
+  width: 5.2rem;
+  height: 100%;
+  border-radius: 5rem;
+  background-color: #ffee56;
+  box-shadow: 1px 11px 19px -4px #aaa1a6;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+section {
+  padding: 1rem;
+}
+
+.hero_container {
+  display: flex;
+  align-items: center;
+  padding: 5rem;
+  gap: 3rem;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  background-color: blueviolet;
+}
+
+.card_container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.service_card_top {
+  background-color: yellow;
+  width: 20rem;
+  height: 20rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.hero_img {
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  width: 45rem;
+  box-shadow: 0 0px 45px -8px #000000;
+  overflow: hidden;
+}
+
+.hero_img img {
+  width: 100%;
+}
+
+.project_container {
+  background-color: #f2f1f1;
+  /* padding: 0 0; */
+  padding-bottom: 5rem;
+}
+.project_container .projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.project_container .projects .project_card {
+  position: relative;
+  background-color: #e6e6e6;
+  width: 20rem;
+  border-radius: 1rem;
+  height: auto;
+  padding: 1rem;
+  gap: 1rem;
+  display: grid;
+  place-items: center;
+}
+.project_container .projects .project_card .img {
+  width: 100%;
+}
+.project_container .projects .project_card h2 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  background-color: #37b16c;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 5rem;
+}
+
+.section_tag {
+  background-color: #4a5059;
+  display: inline-block;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 2rem;
+  border: 2px solid #de6565;
+}
+
+i {
+  font-size: 10rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ger_btn {
+  padding: 0.5rem 2.5rem;
+  background-color: #86e586;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.advantages {
+  padding: 5rem 0 5rem 5rem;
+}
+.advantages .field_container h2 {
+  margin: 1.5rem 0 0.5rem 0.5rem;
+}
+.advantages .field_container h2 span {
+  margin-left: 0.5rem;
+  color: #de6565;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.field img {
+  width: 9rem;
+}
+
+.field_use_rating {
+  width: 50%;
+  height: 0.3rem;
+  background-color: #c6baba;
+  position: relative;
+  border-radius: 5rem;
+}
+
+.field_use_rating::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  border-radius: 5rem;
+  height: 100%;
+  background-color: red;
+}
+
+.field_use_rating::after {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  left: 78.5%;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  background-color: red;
+}
+
+.services_container {
+  padding-bottom: 5rem;
+  background-color: #f2f1f1;
+}
+.services_container .services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.services_container .services .service_card {
+  background-color: #e6e6e6;
+  width: 20rem;
+  border-radius: 1rem;
+  height: auto;
+  padding: 1rem;
+  gap: 1rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.services_container .services .service_card img {
+  width: 60%;
+}
+
+.form_container {
+  background-color: #f2f2f2;
+  padding: 5rem;
+}
+.form_container form {
+  display: grid;
+  place-items: center;
+}
+.form_container .form {
+  width: 90%;
+  background-color: white;
+  display: flex;
+}
+.form_container .form label {
+  font-size: 1.5rem;
+}
+.form_container .form .contact_option {
+  width: 30%;
+  background-color: #63e4a1;
+}
+.form_container .form .touch_container {
+  padding: 2rem;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* gap: 1.5rem; */
+  width: 70%;
+}
+.form_container .form .touch_container .touch {
+  margin-bottom: 1.5rem;
+}
+.form_container .form .touch_container .touch .main_input {
+  display: flex;
+  gap: 1.5rem;
+}
+.form_container .form .touch_container .touch .main_input div {
+  width: 100%;
+}
+.form_container .form .touch_container .touch .main_input div input {
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #d7d8d9;
+  outline: none;
+  margin-top: 1rem;
+  padding: 1rem 0.8rem 0.5rem 0.8rem;
+}
+.form_container .form .touch_container .send_btn_wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.send_input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.send_input div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.send_input div input {
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #d7d8d9;
+  outline: none;
+  margin-top: 1rem;
+  padding: 1rem 0.8rem 0.5rem 0.8rem;
+}
+.send_input div textarea {
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #d7d8d9;
+  outline: none;
+  margin-top: 1rem;
+  padding: 1rem 0.8rem 0.5rem 0.8rem;
+  height: auto;
+}
+
+.contact_options {
+  width: 30%;
+  background-color: #63e4a1;
+}
+
+.footer_container {
+  background-color: #63e4a1;
+  padding: 2rem;
+  height: auto;
+  color: white;
+}
+.footer_container .footer {
+  display: flex;
+  gap: 1rem;
+}
+.footer_container .footer .about,
+.footer_container .footer .contact {
+  padding: 1rem;
+}
+.footer_container .footer .about div,
+.footer_container .footer .contact div {
+  margin-top: 1rem;
+}
+.footer_container .footer .contact_f,
+.footer_container .footer .about_f {
+  width: 50%;
+}
+.footer_container .footer .contact_f .about_links,
+.footer_container .footer .about_f .about_links {
+  margin-top: 2rem;
+}
+.footer_container .footer .contact_f .about_links a,
+.footer_container .footer .about_f .about_links a {
+  background-color: #343232;
+  padding: 1rem 1.2rem;
+  border-radius: 100%;
+  color: white;
+  margin-right: 0.8rem;
+  text-align: center;
+}
+
+.pro_show_container {
+  display: flex;
+}
+.pro_show_container .pro_list_container {
+  height: 100vh;
+  width: 30%;
+  background-color: #de6565;
+}
+.pro_show_container .pro_shower_container {
+  height: 100vh;
+  width: 70%;
+  background-color: #37b16c;
+}
+
+/*# sourceMappingURL=home.css.map */
